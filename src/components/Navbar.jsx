@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const TopBar = () => {
     return (
         <div className="bg-primary tracking-wide text-white p-2 flex justify-center items-center">
@@ -10,7 +12,7 @@ const TopBar = () => {
 
 const MainNav = () => {
     return (
-        <nav className="w-full bg-white mx-auto flex items-center justify-between p-6 px-14">
+        <nav className="relative w-full bg-white mx-auto flex items-center justify-between p-6 px-14">
             <h1 className="text-text text-xl sm:text-2xl font-extrabold cursor-pointer">STICH & THREADS</h1>
 
             <ul className="hidden md:flex items-center gap-6 uppercase font-medium tracking-wider">
@@ -30,18 +32,22 @@ const MainNav = () => {
                 <span className="border-l-2 border-y-slate-200 h-12"></span><i className="ri-search-line cursor-pointer"></i>
             </div>
 
-            <i className="ri-menu-line font-bold text-xl cursor-pointer"></i>
-        
+            <SideBar />
         </nav>
     )
 }
 
 const SideBar = () => {
-    return (
-        <aside className="">
-            {/* <h1 className="text-text text-xl sm:text-2xl font-extrabold cursor-pointer">STICH & THREADS</h1> */}
 
-            <ul className="hidden md:flex items-center gap-6 uppercase font-medium tracking-wider">
+    const [isSide, setIsSide] = useState(false)
+
+    return (
+        <>
+        <i onClick={()=>setIsSide(!isSide)} className={`${isSide ? "ri-close-line" : "ri-menu-line"} block md:hidden font-bold text-xl cursor-pointer`}></i>
+        <aside className={`block md:hidden bg-white z-10 p-10 absolute inset-0 drop-shadow-md h-screen max-w-[300px] transition-all duration-300 ease-in-out ${isSide ? "translate-x-0" : "-translate-x-80"}`}>
+            <h1 className="text-text text-xl sm:text-2xl font-extrabold cursor-pointer">STICH & THREADS</h1>
+
+            <ul className="flex flex-col item-start mt-10 gap-6 uppercase font-medium tracking-wider">
                 {['Home', 'About', 'Services', 'Portfolio', 'Contact Us', 'Get a Quote'].map((item, key) => {
                     return (
                         <li key={key} className="flex items-center gap-1">
@@ -52,24 +58,25 @@ const SideBar = () => {
                 })}
             </ul>
 
-            <div className="hidden md:flex items-center gap-4 text-2xl">
+            <div className="flex items-center gap-4 text-2xl absolute bottom-0">
                 <button aria-label="Facebook"><i class="ri-facebook-circle-fill cursor-pointer"></i></button>
                 <button aria-lablel="Instagram"><i class="ri-instagram-fill cursor-pointer"></i></button>
                 <span className="border-l-2 border-y-slate-200 h-12"></span><i className="ri-search-line cursor-pointer"></i>
             </div>
 
-            {/* <i className="ri-menu-line font-bold text-xl cursor-pointer"></i> */}
         </aside>
+        
+        </>
     )
 }
 
 const Navbar = () => {
     return (
         <>
-            <header className="w-screen font-body mx-auto">
+            <header className="relative w-screen font-body mx-auto">
                 <TopBar />
                 <MainNav />
-                <SideBar />
+                
             </header>
         </>
     )

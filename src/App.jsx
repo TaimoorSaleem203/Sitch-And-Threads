@@ -1,8 +1,11 @@
-import React from 'react'
+import Navbar from "./components/Navbar"
 
 const App = () => {
   return (
-    <div className='font-bold'>App</div>
+    <>
+      {/* <h1 className='text-2xl font-heading font-bold text-primary'>App</h1> */}
+      <Navbar/>
+    </>
   )
 }
 

@@ -13,13 +13,13 @@ const TopBar = () => {
 const MainNav = () => {
     return (
         <nav className="relative w-full bg-white mx-auto flex items-center justify-between p-6 px-16">
-            <h1 className="text-text text-xl sm:text-2xl font-extrabold cursor-pointer">STICH & THREADS</h1>
+            <h1 className="text-text text-xl md:text-2xl font-extrabold cursor-pointer">STICH & THREADS</h1>
 
             <ul className="hidden md:flex items-center gap-6 uppercase font-medium tracking-wider">
                 {['Home', 'About', 'Services', 'Portfolio', 'Contact Us', 'Get a Quote'].map((item, key) => {
                     return (
                         <li key={key} className="flex items-center gap-1">
-                            <a href="#" className="hover:text-primary px-1">{item}</a>
+                            <a href="#" className="hover:text-primary px-1 text-[16px]">{item}</a>
                             {item == "Services" && <i className="ri-arrow-down-s-line cursor-pointer"></i>}
                         </li>
                     )

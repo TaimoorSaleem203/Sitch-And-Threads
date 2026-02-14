@@ -11,10 +11,10 @@ const Services = () => {
         </div>
 
         <div className="max-w-screen flex flex-col items-center mx-auto mt-20">
-            {["Embroidery Digitizing","Vector Tracing","Screen Separation","Custom Patches","DTF Gang Sheets","Custom Apparels"].map((item)=>{
+            {["Embroidery Digitizing","Vector Tracing","Screen Separation","Custom Patches","DTF Gang Sheets","Custom Apparels"].map((item,key)=>{
                 return (
-                    <div className={`transition-all duration-300 ease-in-out w-full flex flex-row items-center justify-between border-b border-text/40 p-8 ${item=="Embroidery Digitizing" && "border-t"}`}>
-                        <h1 className="translate-x-12 max-w-36 sm:max-w-full uppercase text-black font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">{item}</h1>
+                    <div key={key} className={`transition-all duration-300 ease-in-out w-full flex flex-row items-center justify-between border-b border-text/40 p-8 ${item=="Embroidery Digitizing" && "border-t"}`}>
+                        <h1 className="translate-x-12 max-w-20 sm:max-w-full uppercase text-black font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">{item}</h1>
                         <button className="-translate-x-12" aria-label="embroidery"><i class="hover:text-primary text-xl lg:text-2xl ri-arrow-right-down-long-line"></i></button>
                     </div>
                 )

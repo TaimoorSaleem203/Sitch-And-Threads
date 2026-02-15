@@ -6,6 +6,8 @@ import Portfolio from "./components/Portfolio.jsx"
 import Quotes from "./components/Quotes.jsx"
 import ContactUs from "./components/ContactUs.jsx"
 import FAQs from "./components/FAQs.jsx"
+import Subscription from "./components/Subscription.jsx"
+import Footer from "./components/Footer.jsx"
 
 const App = () => {
   return (
@@ -20,7 +22,8 @@ const App = () => {
       <Quotes /> 
       <ContactUs />
       <FAQs />
-
+      <Subscription />
+      <Footer />
     </div>
 
     </>

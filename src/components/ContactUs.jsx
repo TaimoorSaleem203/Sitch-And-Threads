@@ -5,38 +5,72 @@ import post4 from "../assets/contactPoster4.png"
 import post5 from "../assets/contactPoster5.png"
 import post6 from "../assets/contactPoster6.png"
 
-const Img = ({src}) => {
+const Img = ({ src }) => {
   return (
-    <img src={src} alt="arrow" className="w-full h-full object-cover rounded-lg"/>
+    <div className="overflow-hidden rounded-xl h-full w-full group">
+      <img 
+        src={src} 
+        alt="Portfolio work" 
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
+      />
+    </div>
   )
 }
 
 const ContactUs = () => {
   return (
-    <section className="mt-28">
-      <div className="max-w-7xl mx-auto flex flex-col gap-6 md:flex-row md:gap-2 p-6 md:p-10 lg:p-12">
-        <div className="flex flex-col gap-2">
-          <div className="h-[200px]">
-            <Img src={post1}  />
+    <section className="mt-28 bg-white">
+      <div className="max-w-7xl mx-auto p-6 md:p-10 lg:p-12">
+        {/* Main Grid Wrapper */}
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          
+          {/* Left Column - Hidden on small, shown on md+ */}
+          <div className="hidden md:flex flex-col gap-4 col-span-1">
+            <div className="h-48">
+              <Img src={post1} />
+            </div>
+            <div className="h-64">
+              <Img src={post2} />
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 h-[200px]">
-            <Img src={post2}  />
-            <Img src={post3}  />
+
+          {/* Center Column - The CTA Box */}
+          <div className="md:col-span-2 lg:col-span-3 bg-secondary rounded-2xl flex flex-col justify-center items-center text-center p-8 lg:p-16 gap-6 order-first md:order-none border border-slate-100 shadow-sm relative overflow-hidden group">
+            {/* Background Accent */}
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-700"></div>
+            
+            <i className="ri-instagram-line text-5xl text-primary animate-bounce-slow"></i>
+            
+            <h2 className="font-heading text-black uppercase text-3xl lg:text-5xl font-black leading-tight z-10">
+              follow us on <br />
+              <span className="text-primary italic">instagram</span>
+            </h2>
+            
+            <p className="font-body max-w-xs text-slate-500 text-sm lg:text-base leading-relaxed z-10">
+              Stay connected with our latest work, client projects, and behind-the-scenes updates.
+            </p>
+            
+            <button className="group/btn relative overflow-hidden transition-all duration-300 active:scale-95 text-sm uppercase bg-black text-white px-10 py-4 rounded-full font-bold tracking-widest z-10 hover:bg-primary hover:shadow-xl hover:shadow-primary/30">
+              <span className="relative z-10">Follow Now</span>
+            </button>
           </div>
-        </div>
-        <div className="bg-secondary py-16 rounded-xl flex flex-col justify-center items-center text-center gap-6">
-          <h1 className="font-heading text-black uppercase text-3xl lg:text-4xl font-bold">follow us on <span className="text-primary">instagram</span></h1>
-          <p className="font-body max-w-prose text-sm lg:text-base">Stay connected with our latest work, client projects, and behind-the-scenes updates.</p>
-          <button className="transition-all duration-150 active:scale-95 focus:outline-none text-sm uppercase bg-primary text-white px-6 p-3 rounded-full font-medium">follow us</button>
-        </div>
-        <div className="flex gap-2 flex-col">
-          <div className="h-[200px]">
-            <Img src={post6} />
+
+          {/* Right Column - Hidden on small, shown on md+ */}
+          <div className="hidden md:flex flex-col gap-4 col-span-1">
+            <div className="h-64">
+              <Img src={post6} />
+            </div>
+            <div className="h-48">
+              <Img src={post4} />
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 h-[200px]">
-            <Img src={post4}  />
-            <Img src={post5}  />
+          
+          {/* Mobile Only: Simplified Grid for images below CTA */}
+          <div className="grid grid-cols-2 gap-4 md:hidden">
+            <div className="h-40"><Img src={post3} /></div>
+            <div className="h-40"><Img src={post5} /></div>
           </div>
+
         </div>
       </div>
     </section>

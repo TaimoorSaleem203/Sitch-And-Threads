@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 import ServiceImg from "../assets/ServiceImg.png"
 
 const Services = () => {
@@ -17,7 +17,6 @@ const Services = () => {
                             key={key}
                             className={`group transition-all duration-500 ease-in-out w-full flex flex-row items-center justify-between border-b border-text/20 py-10 md:py-14 px-4 hover:bg-primary/5 ${key === 0 && "border-t"}`}
                         >
-                            {/* Left: Index & Title */}
                             <div className="flex items-center gap-4 md:gap-8">
                                 <span className="hidden sm:block font-heading text-primary/40 font-bold text-xl">
                                     0{key + 1}

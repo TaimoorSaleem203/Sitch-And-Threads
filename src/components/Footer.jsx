@@ -6,10 +6,8 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 py-12">
 
-        {/* Top Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          {/* Address */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-xl">
               Address
@@ -20,7 +18,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="text-white font-semibold text-xl mb-4">
               Contact
@@ -29,7 +26,6 @@ const Footer = () => {
             <p className="text-sm">+1 500 321 852 789</p>
           </div>
 
-          {/* Social */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-xl">
               Social
@@ -41,7 +37,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Quick Links */}
+
           <div>
             <h3 className="text-white font-semibold mb-4 text-xl">
               Quick Links
@@ -55,18 +51,18 @@ const Footer = () => {
 
         </div>
 
-        {/* Divider */}
+
         <div className="border-t border-gray-700 my-10"></div>
 
-        {/* Bottom Row */}
+
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
 
           <h2 className="text-white font-medium font-heading text-xl tracking-wide">
-            STITCH N THREADS
+            STITCH <span className="text-primary font-semibold">&</span> THREADS
           </h2>
 
           <p className="text-sm text-gray-400 text-center font-body md:text-right">
-            Copyright © Stitch N Threads | Designed by Nabia Shakeel
+            Copyright © Stitch & Threads | Designed by Nabia Shakeel
           </p>
 
         </div>

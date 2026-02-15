@@ -3,7 +3,7 @@ import LandImg from "../assets/LandPageImg.png"
 const LandPage = () => {
   return (
     <main className='w-full py-16 p-6 md:p-8 lg:p-12 bg-secondary'>
-      
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 gap-12 lg:gap-14 lg:grid-cols-2 justify-center">
         <div className="flex flex-col gap-8 mx-auto items-center justify-center">
           <h1 className="flex flex-col gap-2 text-center text-primary uppercase tracking-normal text-4xl md:text-5xl lg:text-6xl font-heading font-semibold">High-Quality
@@ -13,10 +13,10 @@ const LandPage = () => {
 
         <form action="" className="mx-auto bg-white border-2 p-6 lg:p-8 rounded-lg shadow-sm font-body font-medium flex flex-col gap-6">
           <h1 className="text-3xl md:text-4xl font-heading uppercase font-bold text-primary text-center">Get Best Price</h1>
-          
+
           <input type="text" placeholder="Name" className="border outline-none focus:ring-1 focus:ring-primary border-gray-400 rounded-lg p-2" />
           <input type="text" placeholder="Email" className="border outline-none focus:ring-1 focus:ring-primary border-gray-400 rounded-lg p-2" />
-          
+
           <div className="grid grid-cols-2 gap-4">
             <input type="text" placeholder="Phone" className="border outline-none focus:ring-1 focus:ring-primary border-gray-400 rounded-lg p-2" />
             <input type="text" placeholder="Quantity" className="border outline-none focus:ring-1 focus:ring-primary border-gray-400 rounded-lg p-2" />

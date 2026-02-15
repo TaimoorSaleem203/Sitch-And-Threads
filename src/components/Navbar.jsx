@@ -1,10 +1,11 @@
 import { useState } from "react"
 
+
 const TopBar = () => {
     return (
         <div className="bg-primary tracking-wide text-white p-2 flex justify-center items-center">
             <i class="hidden md:block ri-arrow-left-s-line -translate-x-10"></i>
-            <span className="text-sm text-center max-w-prose sm:text-[16px]">Free shipping on US orders $100+ & Free exchanges</span>
+            <span className="text-[12px] text-center max-w-prose sm:text-[14px] md:text-[16px]">Free shipping on US orders $100+ & Free exchanges</span>
             <i class="hidden md:block ri-arrow-right-s-line translate-x-10"></i>
         </div>
     )
@@ -13,7 +14,7 @@ const TopBar = () => {
 const MainNav = () => {
     return (
         <nav className="relative w-full bg-white mx-auto flex items-center justify-between p-6 px-16">
-            <h1 className="text-text text-xl md:text-2xl font-extrabold cursor-pointer">STITCH & THREADS</h1>
+            <h1 className="text-text text-xl md:text-2xl font-extrabold cursor-pointer">STITCH <span className="text-primary font-semibold">&</span> THREADS</h1>
 
             <ul className="hidden md:flex items-center gap-6 uppercase font-medium tracking-wider">
                 {['Home', 'About', 'Services', 'Portfolio', 'Contact Us', 'Get a Quote'].map((item, key) => {
@@ -49,7 +50,7 @@ const SideBar = () => {
             <i onClick={() => setIsSide(!isSide)} className={`${isSide ? "ri-close-line hidden" : "ri-menu-line"} block md:hidden font-bold text-xl cursor-pointer`}></i>
             <aside className={`md:hidden bg-white z-10 p-10 fixed inset-0 drop-shadow-md h-screen max-w-[300px] transition-all duration-300 ease-in-out ${isSide ? "translate-x-0" : "-translate-x-80"}`}>
                 <div className="flex items-center justify-between">
-                    <h1 className="text-text text-xl font-extrabold cursor-pointer">STICH & THREADS</h1>
+                    <h1 className="text-text text-xl font-extrabold cursor-pointer">STICH <span className="text-primary font-semibold">&</span> THREADS</h1>
                     <i onClick={() => setIsSide(!isSide)} className={`ri-close-line block md:hidden font-bold text-2xl cursor-pointer`}></i>
 
                 </div>

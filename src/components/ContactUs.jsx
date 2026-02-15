@@ -21,10 +21,8 @@ const ContactUs = () => {
   return (
     <section className="mt-28 bg-white">
       <div className="max-w-7xl mx-auto p-6 md:p-10 lg:p-12">
-        {/* Main Grid Wrapper */}
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4">
           
-          {/* Left Column - Hidden on small, shown on md+ */}
           <div className="hidden md:flex flex-col gap-4 col-span-1">
             <div className="h-48">
               <Img src={post1} />
@@ -34,9 +32,8 @@ const ContactUs = () => {
             </div>
           </div>
 
-          {/* Center Column - The CTA Box */}
           <div className="md:col-span-2 lg:col-span-3 bg-secondary rounded-2xl flex flex-col justify-center items-center text-center p-8 lg:p-16 gap-6 order-first md:order-none border border-slate-100 shadow-sm relative overflow-hidden group">
-            {/* Background Accent */}
+   
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-700"></div>
             
             <i className="ri-instagram-line text-5xl text-primary animate-bounce-slow"></i>
@@ -55,7 +52,6 @@ const ContactUs = () => {
             </button>
           </div>
 
-          {/* Right Column - Hidden on small, shown on md+ */}
           <div className="hidden md:flex flex-col gap-4 col-span-1">
             <div className="h-64">
               <Img src={post6} />
@@ -65,7 +61,6 @@ const ContactUs = () => {
             </div>
           </div>
           
-          {/* Mobile Only: Simplified Grid for images below CTA */}
           <div className="grid grid-cols-2 gap-4 md:hidden">
             <div className="h-40"><Img src={post3} /></div>
             <div className="h-40"><Img src={post5} /></div>

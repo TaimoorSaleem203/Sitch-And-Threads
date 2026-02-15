@@ -60,7 +60,7 @@ const FAQs = () => {
                     <div className='font-body mr-auto flex flex-col gap-2'>
                         <h6 className='text-xl font-bold max-w-xs'>Still Have A Question ?</h6>
                         <p className="max-w-xs text-side">We’re here to help. Reach out to our team and we’ll get back to you as soon as possible.</p>
-                        <button className='bg-text mt-3 text-white p-2 rounded-full text-xl'>Contact Us</button>
+                        <button className='bg-text mt-3 text-white p-2 rounded-full text-xl active:scale-95 hover:bg-primary transition-all ease-in-out'>Contact Us</button>
                     </div>
                 </div>
 
